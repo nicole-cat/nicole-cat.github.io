@@ -1,15 +1,97 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>Nicole Cat</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Nicole Cat Network Co., Ltd" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nicole Cat" />
+    <meta name="twitter:description" content="Nicole Cat Network Co., Ltd">
+    <meta name="twitter:image" content="https://nicolecat.com/resources/icon.png">
+    <title>Nicole Cat</title>
+    <style type="text/css">
+        body {
+            background-color: white;
+            margin: 0px;
+        }
 
+        con {
+            height: 28%;
+            display: flex;
+            flex-direction: column;
+            column-gap: 1.5%;
+        }
+
+        t1 {
+            color: #000;
+            font-family: SF Pro Display;
+            font-size: 4cqw;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        t2 {
+            color: #000;
+            font-family: SF Pro Display;
+            font-size: 1.6cqw;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        copyright {
+            color: #000;
+            font-family: SF Pro Display;
+            font-size: 0.8cqw;
+            font-style: normal;
+            font-weight: 200;
+            line-height: normal;
+        }
+
+        .intro_image {
+            flex-shrink: 0;
+            height: 100%;
+            object-fit: contain;
+            background-color: red;
+        }
+
+        section {
+            display: flex;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
+            column-gap: 14.5%;
+        }
+
+        article {
+            width: 61%;
+            display: flexbox;
+            padding-top: 12%;
+            padding-left: 11%;
+            padding-bottom: 7%;
+            justify-content: space-between;
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
 </head>
+
 <body>
-
-<h1>Nicole Cat</h1>
-<img src="./resources/icon.png"/>
-
+    <section>
+        <article>
+            <con>
+                <t1>Nicole Cat Network
+                    Co., Ltd</t1></br>
+                <t2>Crafting Emotions, Shaping Experiences</t2>
+            </con>
+            <copyright>Copyright by Nicole Cat Network Co., Ltd</copyright>
+        </article>
+        <div>
+            <img class="intro_image" src="./resources/intro.jpg" />
+        </div>
+    </section>
 </body>
+
 </html>
