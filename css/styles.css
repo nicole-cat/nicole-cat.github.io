@@ -142,7 +142,7 @@ main {
 
 .intro {
     flex: 1; /* Allow intro to take up available space */
-    padding: 20px; /* Add some padding for spacing */
+    padding: 10px; /* Add some padding for spacing */
     box-sizing: border-box; /* Include padding in the element's total width and height */
     font-size: 0.7em; 
     margin: 0 10%; /* Add 15% margin on the left and right */
