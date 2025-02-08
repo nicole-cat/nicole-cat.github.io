@@ -1,0 +1,250 @@
+/* @media (max-aspect-ratio: 1/1) {
+    .page main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .intro, .images {
+        width: 100%; 
+        max-width: 600px; 
+        margin: 0; 
+        padding: 20px; 
+        box-sizing: border-box; 
+    }
+
+    .intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .phone-image, .apple-image {
+        max-width: 100%;
+        height: auto; 
+    }
+} */
+
+@font-face {
+    font-family: 'CJKFonts';
+    src: url('../resources/cjkFonts-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    font-family: 'CJKFonts', Arial, sans-serif; /* Set the custom font as default */
+}
+
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.page {
+    position: relative; /* Ensure the footer is positioned relative to the page */
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column; /* Allow main and footer to stack vertically */
+    justify-content: space-between; /* Space between main content and footer */
+    align-items: center;
+    color: #000; /* Text color */
+    overflow: visible;
+}
+
+.page:nth-child(odd) {
+    background: #FFF; /* White background for odd pages */
+}
+
+.page:nth-child(even) {
+    background: #ECF0F3; /* Gray background for even pages */
+}
+
+header {
+    position: relative; /* Ensure the pseudo-element is positioned relative to the header */
+    width: 100%;
+    background-color: #FFF; /* Ensure background color is set */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 2vw; /* Start 1vw from the left */
+    right: 2vw; /* End 1vw from the right */
+    width: calc(100% - 4vw); /* 100% width minus 2vw for the margins */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3); /* Black border */
+}
+
+.page1-content {
+    margin-top: -4vw; /* Adjust this value to match the height of the header */
+    padding-top: 4vw; /* Add padding to ensure content is not hidden behind the header */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    padding: 1vh 2vw; 
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 1vw; 
+    margin-left: 1vw;
+}
+
+.header nav ul li:nth-last-child(3) {
+    flex: 1; /* Make the item before the last one (Twitter) take more space */
+}
+
+.header nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2vw; /* Adjusted font size */
+}
+
+.header nav ul li:first-child a {
+    font-size: 2vw; /* Adjusted font size for the first link */
+    font-weight: 800;
+    margin-right: 3vw; 
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh; /* Ensure it takes the full viewport height */
+    overflow: hidden; /* Prevent overflow */
+    margin: 0 5%; /* Add 15% margin on the left and right */
+}
+
+.intro {
+    flex: 1; /* Allow intro to take up available space */
+    padding: 20px; /* Add some padding for spacing */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    font-size: 0.7em; 
+    margin: 0 10%; /* Add 15% margin on the left and right */
+    transform: translateY(-10vh); 
+}
+
+.images {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55vw; /* Ensure it doesn't exceed viewport width */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transform: translateY(-4vh); 
+}
+
+#page1 .images {
+    width: 70vw;
+}
+
+
+.phone-image {
+    width: 100%; /* Use percentage to scale within the parent container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+h1.title {
+    margin-bottom: 0px; /* Adjust this value to reduce spacing */
+    font-size: 7vw;
+}
+
+p.subtitle {
+    margin-top: 0px; /* Adjust this value to reduce spacing */
+    margin-bottom: 2vh;
+    font-size: 4vw; 
+}
+
+p.content {
+    margin-top: 2vh;
+    font-size: 1.1vw; 
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.apple-image {
+    margin-top: 4vh; /* Adjust this value to reduce spacing */
+    width: 40%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 200px; /* Optional: set a maximum width */
+}
+
+#page2-images,
+#page4-images {
+    margin-left: 10%; /* Reserve 10% space on the left */
+    transform: scale(1.7);
+}
+
+.desc-intro {
+    font-size: 1.5vw; /* Adjust font size as needed */
+    margin-bottom: 1vh; /* Adjust spacing below the element */
+}
+
+#page2 h1.title,
+#page3 h1.title,
+#page4 h1.title {
+    font-size: 6vw; /* Adjust font size as needed */
+    margin-top: 1vh; /* Adjust top margin as needed */
+}
+
+.footer {
+    width: 100%;
+    background-color: #000; /* Light background color */
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.footer nav ul li a {
+    text-decoration: none;
+    font-size: 1vw; /* Adjust font size as needed */
+    color: #fff;
+}
+
+.footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    margin: 0;
+}
+
+.footer nav ul li {
+    margin-right: 2vw; /* Add margin to space out the links */
+}
+
+.footer nav ul li:last-child {
+    margin-left: auto; /* Push the last item (copyright) to the far right */
+}

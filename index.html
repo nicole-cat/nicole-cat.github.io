@@ -9,96 +9,96 @@
     <meta name="twitter:description" content="Nicole Cat Network Co., Ltd">
     <meta name="twitter:image" content="https://nicolecat.com/resources/icon.png">
     <title>Nicole Cat</title>
-    <style type="text/css">
-        body {
-            background-color: white;
-            margin: 0px;
-        }
-
-        con {
-            height: 28%;
-            display: flex;
-            flex-direction: column;
-            column-gap: 1.5%;
-        }
-
-        t1 {
-            color: #000;
-            font-family: SF Pro Display;
-            font-size: 5cqw;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
-
-        t2 {
-            color: #000;
-            font-family: SF Pro Display;
-            font-size: 2cqw;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-        }
-
-        copyright {
-            color: #000;
-            font-family: SF Pro Display;
-            font-size: 1cqw;
-            font-style: normal;
-            font-weight: 200;
-            line-height: normal;
-        }
-
-        .intro_image {
-            width: 100%;
-            object-fit: contain;
-            position: absolute;
-            bottom: 0;
-        }
-
-        .image_con {
-            width: 32.3%;
-            height: auto;
-            aspect-ratio: 621/1009;
-            position: relative;
-        }
-
-        section {
-            display: flex;
-            width: 100%;
-            height: auto;
-            column-gap: 8.1%;
-            aspect-ratio: 16/9;
-        }
-
-        article {
-            width: 59%;
-            display: flexbox;
-            padding-top: 12%;
-            padding-left: 12.8%;
-            padding-bottom: 7%;
-            justify-content: space-between;
-            align-items: flex-start;
-            display: flex;
-            flex-direction: column;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <section>
-        <article>
-            <con>
-                <t1>Nicole Cat Network
-                    Co., Ltd</t1></br>
-                <t2>Crafting Emotions, Shaping Experiences</t2>
-            </con>
-            <copyright>Copyright by Nicole Cat Network Co., Ltd</copyright>
-        </article>
-        <div class="image_con">
-            <img class="intro_image" src="./resources/intro.jpg" />
+    <div class="container">
+        <div class="page" id="page1">
+            <header class="header">
+                <nav>
+                    <ul>
+                        <li><a href="#">NicoleCat</a></li>
+                        <li><a href="#page2">NekoNeko Todo</a></li>
+                        <li><a href="#page3">NekoNeko Focus</a></li>
+                        <li><a href="#page4">Calendar</a></li>
+                        <li><!-- <a href="#">Twitter</a> --></li>
+                        <li><a href="mailto:support@nicolecat.com">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="page1-content">
+                <main>
+                    <section class="intro">
+                        <h1 class="title">NekoNeko</h1>
+                        <p class="subtitle">Series</p>
+                        <p class="content">Minimalist Cat Companion: Simple, Elegant, Always by Your Side</p>
+                        <!-- https://apps.apple.com/developer/id1715438272 -->
+                        <a href="https://apps.apple.com/app-bundle/id1784107487">
+                            <img src="resources/apple_down.svg" class="apple-image">
+                        </a>
+                    </section>
+                    <section class="images" id="page1-images">
+                        <img src="resources/page1.png" class="phone-image">
+                    </section>
+                </main>
+            </div>
         </div>
-    </section>
+        <div class="page" id="page2">
+            <main>
+                <section class="images" id="page2-images">
+                    <img src="resources/page2.png" class="phone-image">
+                </section>
+                <section class="intro">
+                    <p class="desc-intro">NekoNeko Series</p>
+                    <h1 class="title">Minimalist</br>Cat Todo</h1>
+                    <a href="https://apps.apple.com/app/id6480501528">
+                        <img src="resources/apple_down.svg" class="apple-image">
+                    </a>
+                </section>
+            </main>
+        </div>
+        <div class="page" id="page3">
+            <main>
+                <section class="intro">
+                    <p class="desc-intro">NekoNeko Series</p>
+                    <h1 class="title">Immersive</br>Cat Flow</h1>
+                    <a href="https://apps.apple.com/app/id6702013134">
+                        <img src="resources/apple_down.svg" class="apple-image">
+                    </a>
+                </section>
+                <section class="images" id="page3-images">
+                    <img src="resources/page3.png" class="phone-image">
+                </section>
+            </main>
+
+        </div>
+        <div class="page" id="page4">
+            <main>
+                <section class="images" id="page4-images">
+                    <img src="resources/page4.png" class="phone-image">
+                </section>
+                <section class="intro">
+                    <p class="desc-intro">NekoNeko Series</p>
+                    <h1 class="title">Minimalist</br>Calendar</h1>
+                    <a href="https://apps.apple.com/app/id6471479898">
+                        <img src="resources/apple_down.svg" class="apple-image">
+                    </a>
+                </section>
+            </main>
+            <footer class="footer">
+                <nav>
+                    <ul>
+                        
+                        <li><a href="cat/privacy.html">Privacy Policy</a></li>
+                        <li><a href="cat/terms.html">Terms of Use</a></li>
+                        <li>Copyright © 2025. All rights reserved by Nicolecat</li>
+                    </ul>
+                </nav>
+            </footer>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
