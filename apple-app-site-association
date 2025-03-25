@@ -1,0 +1,18 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+	        {
+	            "appID": "PR26HX49KQ.com.nicolecat.Todo",
+	            "paths": ["/todo/*"]
+	        }, {
+	            "appID": "PR26HX49KQ.com.nicolecat.Focus",
+	            "paths": ["/flow/*", "/focus/*"]
+	        }, {
+	            "appID": "PR26HX49KQ.com.nicolecat.calendar",
+	            "paths": ["/calendar/*"]
+	        }
+        ]
+    }
+}
+
